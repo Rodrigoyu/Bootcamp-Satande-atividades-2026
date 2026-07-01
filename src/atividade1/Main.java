@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
-        Conta c = new Conta();
 
         System.out.println("Digite seu Nome");
         String nome = sc.next();
-        c.setNome(nome);
+
 
         //O metodo .trim() remove espaços vazios acidentais
 
@@ -20,19 +19,19 @@ public class Main {
         while (nome.trim().isEmpty()){
             System.out.println("Seu nome e obrigadorio");
             nome = sc.next();
-            c.setNome(nome);
+
         }
 
         System.out.println("Deseja deposita algum valor Inicial?(y/n");
         String confirmaSaldoInicial = sc.next();
-
+        double saldoInicial = 0.0;
         if (confirmaSaldoInicial.equalsIgnoreCase("y")){
             System.out.println("Digite o valor do saldo Inicial");
-            double saldoInicial = sc.nextDouble();
-            c.setSaldo(saldoInicial);
-        }else{
-            c.setSaldo(0.0);
+             saldoInicial = sc.nextDouble();
+
         }
+
+        Conta c = new Conta(nome , saldoInicial);
 
     System.out.println("Seja bem vindo, " + nome);
 for (int i = 0; i < 7;) {
@@ -53,6 +52,7 @@ for (int i = 0; i < 7;) {
             System.out.println(c.getSaldoTotal());
             break;
         case "2":
+
             System.out.println(c.getChequeEspecial());
             break;
         case "3":
@@ -71,7 +71,7 @@ for (int i = 0; i < 7;) {
             c.sacar(boleto);
             break;
         case "6":
-            System.out.println(c.verificaChequeEspecial());
+            c.verificaChequeEspecial();
             break;
         case "7":
         default:
