@@ -30,7 +30,6 @@ public class Main {
         public Alimentacao(double preco) {
             this.preco = preco;
         }
-
         @Override
         public double calcularImposto() {
             return this.preco * 0.01;
