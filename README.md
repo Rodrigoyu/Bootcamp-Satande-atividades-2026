@@ -65,29 +65,7 @@ Abaixo estão detalhados o objetivo, conceitos aplicados e classes de cada ativi
 
 ---
 
-## 🚀 Como Executar o Projeto
 
-### Opção 1: Via IntelliJ IDEA (Recomendado)
-1. Abra o IntelliJ IDEA e selecione a pasta raiz do projeto (`Atividades`).
-2. Certifique-se de que o SDK do Java esteja configurado em `File > Project Structure > Project > SDK`.
-3. Navegue até o pacote da atividade desejada (ex: `src/atividade1/Main.java`).
-4. Clique no ícone de execução (**Run / ▶**) ao lado do método `main`.
-
-### Opção 2: Via Linha de Comando (Terminal)
-Abra o terminal na raiz do projeto:
-
-```bash
-# Compilar todas as classes do projeto para a pasta out
-javac -d out $(Get-ChildItem -Recurse -Filter *.java src | Select-Object -ExpandProperty FullName)
-
-# Executar uma atividade específica (exemplo: atividade1)
-java -cp out atividade1.Main
-
-# Outro exemplo: executar a atividade 9
-java -cp out atividade9.Main
-```
-
----
 
 ## 👤 Autor
 
